@@ -10,4 +10,9 @@ while True:
     if ser.in_waiting > 0:
         data = ser.read(1)
         client.publish('lab/alena21/photo/instant', data[0])
+        if initial:
+            values = [data[0] for i in range(100)]
+            initial = False
+        values.pop(0)
+        values.append(data[0])
 client.disconnect()
