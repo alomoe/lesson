@@ -9,7 +9,7 @@ def get_connection(port):
     ser = serial.Serial(port,timeout=1)
     return ser
 
-def send(ser,message, mesg_len):
+def send(ser,message):
     ser.write(message)
     time.sleep(0.005)
 
@@ -24,9 +24,9 @@ def on_message(client, userdata, message):
         sen_value = float(data)
         print(f"sen_value: {sen_value}")  
         if(sen_value > float(30)):
-            send(ser, 'd'.encode(), 0)
+            send(ser, 'd'.encode())
         else:
-            send(ser, 'u'.encode(), 0)
+            send(ser, 'u'.encode())
 
 broker="broker.emqx.io"
 
