@@ -12,11 +12,6 @@ def get_connection(port):
 def send(ser,message, mesg_len):
     ser.write(message)
     time.sleep(0.005)
-    if mesg_len != 0:
-        data = ser.readline()
-        result = data.decode()
-        result = result.strip()
-        return (result)
 
 ser = get_connection("COM9")
 
