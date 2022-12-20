@@ -2,7 +2,6 @@
 #define NUM_LEDS 15
 #define led_pin 13
 #define DATA_PIN 2
-#define CLOCK_PIN 15
 
 CRGB leds[NUM_LEDS];
 
