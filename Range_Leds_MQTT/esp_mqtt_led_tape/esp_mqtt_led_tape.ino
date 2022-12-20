@@ -31,12 +31,7 @@ void loop() {
       delay(500);
     }
     else{
-      digitalWrite(led_pin, LOW);
-      for (int i = 0; i < 15; i++){
-        leds[i] = CRGB::Black;
-      }
-      FastLED.show();
-      delay(500);
+      Serial.print("no comand");
     }
   }
 }
