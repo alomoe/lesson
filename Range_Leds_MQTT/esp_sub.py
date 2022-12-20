@@ -39,8 +39,6 @@ except Exception:
     print('Failed to connect. Check network')
     exit()
     
-client.loop_start()
-
 wait_time = 5
 sleep_time = 1   
 while not client.is_connected():
@@ -48,6 +46,8 @@ while not client.is_connected():
     wait_time -= sleep_time
     if not wait_time:
         raise ValueError('Failed to connect. Timeout')
+        
+client.loop_start()
     
 print('Subscribing')
 client.subscribe('esp8266-BFBF/range')
