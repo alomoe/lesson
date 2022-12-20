@@ -12,7 +12,7 @@ long start_data, start_space;
 long duration[100];
 bool color[100];
 int index = 0;
-int previous = SPACE_LEVEL;
+int previous = DATA_LEVEL;
 String CODES[] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
 char LETTERS[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' '};
 int NLETTERS = 27;
