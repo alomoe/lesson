@@ -16,7 +16,7 @@ mySerial.println("Hello, budy?");
 
 void loop() {
  if (mySerial.available()){
-  f=mySerial.read();
+  f=(mySerial.read()-'0');
     for(int i=0;i<7;i++){
     if(bitRead(numbers[f],7-i)==HIGH)
     digitalWrite(pins[i],HIGH);
