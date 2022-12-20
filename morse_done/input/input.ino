@@ -31,13 +31,10 @@ void loop() {
 void decode_letter(){
       for(int j = 0; j<index; j++){
         if(duration[j] == DASH_DURATION && color[j] == DATA){
-          code+='-';
+          code+="-";
         }
         if(duration[j] == DOT_DURATION && color[j] == DATA){
-          code+='.';
-        }
-        if(duration[j] == DASH_DURATION && color[j] == SPACE){
-          code+='';
+          code+=".";
         }
         if(duration[j] == DASH_DURATION && color[j] == SPACE){
           for(int iletter=0; iletter<NLETTERS; iletter++){
@@ -47,7 +44,7 @@ void decode_letter(){
           }   
         }
         if(duration[j] > DASH_DURATION && color[j] == SPACE){
-          Serial.print(' ');  
+          Serial.print(" ");  
         }
       }
 }
