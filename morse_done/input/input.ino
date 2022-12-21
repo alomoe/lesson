@@ -53,13 +53,13 @@ void fill_arays() {
   int current = digitalRead(DATA_PIN);
   if (current == DATA_LEVEL && previous == SPACE_LEVEL){
     start_data = millis();
-    duration[index] = (millis() - start_space + 0.5 * TU) / TU;
+    duration[index] = int((millis() - start_space + 0.5 * TU) / TU);
     color[index]=DATA;
     index++;
   }
   if (current == SPACE_LEVEL && previous == DATA_LEVEL){
     start_space = millis();
-    duration[index] = (millis() - start_data + 0.5 * TU) / TU;
+    duration[index] = int((millis() - start_data + 0.5 * TU) / TU);
     color[index]=SPACE;
     index++;
   }
