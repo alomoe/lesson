@@ -1,52 +1,50 @@
-int C1 = 2;
-int D = 3;
-int E = 4;
-int F = 5;
-int G = 6;
-int A = 7;
-int B = 8;
-int C2 = 9;
+int A = 2;
+int B = 3;
+int C = 4;
+int D = 5;
+int E = 6;
+int F = 7;
+int G = 8;
+int H = 9;
 
 void setup() {
   Serial.begin(115200);
-  pinMode(C1, INPUT);
+  pinMode(A, INPUT);
+  pinMode(B, INPUT);
+  pinMode(C, INPUT);
   pinMode(D, INPUT);
   pinMode(E, INPUT);
   pinMode(F, INPUT);
   pinMode(G, INPUT);
-  pinMode(A, INPUT);
-  pinMode(B, INPUT);
-  pinMode(C2, INPUT);
+  pinMode(H, INPUT);
 }
 
 void loop() {
-  if (digitalRead(C1)) {
-    Serial.println("1");
-    delay(100);
-  } else if (digitalRead(D)) {
-    Serial.println("2");
-    delay(100);
-  } else if (digitalRead(E)) {
-    Serial.println("3");
-    delay(100);
-  } else if (digitalRead(F)) {
-    Serial.println("4");
-    delay(100);
-  } else if (digitalRead(G)) {
-    Serial.println("5");
-    delay(100);
-  } else if (digitalRead(A)) {
-    Serial.println("6");
+  if (digitalRead(A)) {
+    Serial.println("0");
     delay(100);
   } else if (digitalRead(B)) {
-    Serial.println("7");
+    Serial.println("1");
     delay(100);
-  } else if (digitalRead(C2)) {
-    Serial.println("8");
+  } else if (digitalRead(C)) {
+    Serial.println("2");
+    delay(100);
+  } else if (digitalRead(D)) {
+    Serial.println("3");
+    delay(100);
+  } else if (digitalRead(E)) {
+    Serial.println("4");
+    delay(100);
+  } else if (digitalRead(F)) {
+    Serial.println("5");
+    delay(100);
+  } else if (digitalRead(G)) {
+    Serial.println("6");
+    delay(100);
+  } else if (digitalRead(H)) {
+    Serial.println("7");
     delay(100);
   } else {
     delay(100);
   }
 }
-
-
